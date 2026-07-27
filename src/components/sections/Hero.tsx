@@ -1,11 +1,11 @@
 "use client";
 
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/SocialIcons";
+import { profile, socials } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import { ArrowDown, BookOpen, FileText } from "lucide-react";
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { profile, socials } from "@/data/portfolio";
-import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/SocialIcons";
 
 const ICONS: Record<string, ReactNode> = {
   github:    <GithubIcon size={18} />,
@@ -17,8 +17,8 @@ const ICONS: Record<string, ReactNode> = {
 
 export function Hero() {
   const nameParts = profile.name.split(" ");
-  const firstName  = nameParts[0] ?? "";
-  const restName   = nameParts.slice(1).join(" ");
+  const firstName  = nameParts.slice(0, 2).join(" ");
+  const restName   = nameParts.slice(2).join(" ");
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
