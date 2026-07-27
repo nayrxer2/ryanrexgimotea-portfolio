@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Section, SectionHeading } from "@/components/Section";
 import { education } from "@/data/portfolio";
+import { motion } from "framer-motion";
 
 export function Education() {
   return (
@@ -74,7 +74,7 @@ export function Education() {
                   {edu.school}
                 </p>
                 <p className="font-pixel text-xs mb-3" style={{ color: "rgba(200,195,240,0.4)" }}>
-                  // {edu.period}
+                   {edu.period}
                 </p>
                 {edu.description && (
                   <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>

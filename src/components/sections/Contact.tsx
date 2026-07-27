@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Send, CheckCircle, AlertCircle, Mail, MapPin } from "lucide-react";
 import { Section, SectionHeading } from "@/components/Section";
-import { profile, FORMSPREE_FORM_ID } from "@/data/portfolio";
+import { FORMSPREE_FORM_ID, profile } from "@/data/portfolio";
+import { motion } from "framer-motion";
+import { AlertCircle, CheckCircle, Mail, MapPin, Send } from "lucide-react";
+import { useState } from "react";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -131,7 +131,7 @@ export function Contact() {
                 <span className="font-pixel text-xs" style={{ color: "#39FF14" }}>STATUS: ONLINE</span>
               </div>
               <p className="font-pixel text-xs" style={{ color: "rgba(200,195,240,0.4)" }}>
-                // Available for freelance & full-time roles
+                Available for freelance & full-time roles
               </p>
             </div>
           </motion.div>
@@ -183,7 +183,7 @@ export function Contact() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block font-pixel text-xs mb-2" style={{ color: "rgba(0,255,255,0.7)" }}>
-                        // NAME:
+                        NAME:
                       </label>
                       <input
                         id="name"
@@ -204,7 +204,7 @@ export function Contact() {
                     </div>
                     <div>
                       <label htmlFor="email" className="block font-pixel text-xs mb-2" style={{ color: "rgba(0,255,255,0.7)" }}>
-                        // EMAIL:
+                        EMAIL:
                       </label>
                       <input
                         id="email"
@@ -227,7 +227,7 @@ export function Contact() {
 
                   <div>
                     <label htmlFor="subject" className="block font-pixel text-xs mb-2" style={{ color: "rgba(0,255,255,0.7)" }}>
-                      // SUBJECT:
+                      SUBJECT:
                     </label>
                     <input
                       id="subject"
@@ -249,7 +249,7 @@ export function Contact() {
 
                   <div>
                     <label htmlFor="message" className="block font-pixel text-xs mb-2" style={{ color: "rgba(0,255,255,0.7)" }}>
-                      // MESSAGE:
+                      MESSAGE:
                     </label>
                     <textarea
                       id="message"

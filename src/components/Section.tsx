@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import type { ReactNode, CSSProperties } from "react";
+import { motion } from "framer-motion";
+import type { CSSProperties, ReactNode } from "react";
 
 interface SectionProps {
   id: string;
@@ -57,7 +57,7 @@ export function SectionHeading({ title, subtitle, color = "cyan" }: SectionHeadi
 
       {subtitle && (
         <p className="max-w-xl mx-auto text-sm tracking-wide" style={{ color: "var(--text-muted)" }}>
-          // {subtitle}
+          {subtitle}
         </p>
       )}
 

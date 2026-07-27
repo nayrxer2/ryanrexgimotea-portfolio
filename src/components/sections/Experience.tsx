@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Section, SectionHeading } from "@/components/Section";
 import { experiences } from "@/data/portfolio";
+import { motion } from "framer-motion";
 
 export function Experience() {
   return (
@@ -102,7 +102,7 @@ export function Experience() {
                     </div>
 
                     <p className="font-pixel text-xs mb-3" style={{ color: "rgba(200,195,240,0.4)" }}>
-                      // {exp.period}
+                      {exp.period}
                     </p>
                     <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-muted)" }}>
                       {exp.description}
