@@ -1,6 +1,10 @@
 "use client";
 
-import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/SocialIcons";
+import {
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+} from "@/components/SocialIcons";
 import { profile, socials } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import { ArrowDown, BookOpen, FileText } from "lucide-react";
@@ -8,22 +12,25 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 const ICONS: Record<string, ReactNode> = {
-  github:    <GithubIcon size={18} />,
-  linkedin:  <LinkedinIcon size={18} />,
+  github: <GithubIcon size={18} />,
+  linkedin: <LinkedinIcon size={18} />,
   instagram: <InstagramIcon size={18} />,
-  blog:      <BookOpen size={18} />,
-  resume:    <FileText size={18} />,
+  blog: <BookOpen size={18} />,
+  resume: <FileText size={18} />,
 };
 
 export function Hero() {
   const nameParts = profile.name.split(" ");
-  const firstName  = nameParts.slice(0, 2).join(" ");
-  const restName   = nameParts.slice(2).join(" ");
+  const firstName = nameParts.slice(0, 2).join(" ");
+  const restName = nameParts.slice(2).join(" ");
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* ── Background layers ── */}
-      <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 pointer-events-none"
+      >
         {/* Scrolling grid */}
         <div className="absolute inset-0 retro-grid opacity-50" />
 
@@ -34,14 +41,16 @@ export function Hero() {
         <div
           className="absolute top-0 left-0 right-0 h-2/3"
           style={{
-            background: "radial-gradient(ellipse at 50% 0%, rgba(191,0,255,0.14) 0%, transparent 65%)",
+            background:
+              "radial-gradient(ellipse at 50% 0%, rgba(191,0,255,0.14) 0%, transparent 65%)",
           }}
         />
         {/* Radial glow — bottom pink */}
         <div
           className="absolute bottom-0 left-0 right-0 h-1/2"
           style={{
-            background: "radial-gradient(ellipse at 50% 100%, rgba(255,45,120,0.14) 0%, transparent 65%)",
+            background:
+              "radial-gradient(ellipse at 50% 100%, rgba(255,45,120,0.14) 0%, transparent 65%)",
           }}
         />
 
@@ -49,7 +58,8 @@ export function Hero() {
         <div
           className="absolute left-0 right-0 h-0.5"
           style={{
-            background: "linear-gradient(90deg, transparent, #00FFFF80, transparent)",
+            background:
+              "linear-gradient(90deg, transparent, #00FFFF80, transparent)",
             animation: "scan-move 7s linear infinite",
             top: 0,
           }}
@@ -60,7 +70,6 @@ export function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 w-full">
         {/* Text block */}
         <div className="flex-1 text-center lg:text-left">
-
           {/* "HELLO, I'M" */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +92,8 @@ export function Hero() {
               className="block"
               style={{
                 color: "#FF2D78",
-                textShadow: "0 0 10px #FF2D78, 0 0 24px rgba(255,45,120,0.5), 0 0 48px rgba(255,45,120,0.3)",
+                textShadow:
+                  "0 0 10px #FF2D78, 0 0 24px rgba(255,45,120,0.5), 0 0 48px rgba(255,45,120,0.3)",
               }}
             >
               {firstName}
@@ -93,7 +103,8 @@ export function Hero() {
                 className="block"
                 style={{
                   color: "#00FFFF",
-                  textShadow: "0 0 10px #00FFFF, 0 0 24px rgba(0,255,255,0.5), 0 0 48px rgba(0,255,255,0.3)",
+                  textShadow:
+                    "0 0 10px #00FFFF, 0 0 24px rgba(0,255,255,0.5), 0 0 48px rgba(0,255,255,0.3)",
                 }}
               >
                 {restName}
@@ -108,7 +119,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-center justify-center lg:justify-start gap-2 mb-5"
           >
-            <span className="font-pixel text-xs" style={{ color: "#BF00FF" }}>&#9658;</span>
+            <span className="font-pixel text-xs" style={{ color: "#BF00FF" }}>
+              &#9658;
+            </span>
             <p
               className="font-display font-bold uppercase tracking-[0.2em] text-base sm:text-lg"
               style={{
@@ -131,7 +144,10 @@ export function Hero() {
             {profile.tagline}
             <span
               className="font-pixel text-xs ml-1"
-              style={{ color: "#FF2D78", animation: "blink 1s step-end infinite" }}
+              style={{
+                color: "#FF2D78",
+                animation: "blink 1s step-end infinite",
+              }}
             >
               ▊
             </span>
@@ -150,34 +166,40 @@ export function Hero() {
               style={{
                 color: "#FF2D78",
                 borderColor: "#FF2D78",
-                boxShadow: "0 0 8px #FF2D78, 0 0 16px rgba(255,45,120,0.25), inset 0 0 8px rgba(255,45,120,0.08)",
+                boxShadow:
+                  "0 0 8px #FF2D78, 0 0 16px rgba(255,45,120,0.25), inset 0 0 8px rgba(255,45,120,0.08)",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "rgba(255,45,120,0.12)";
-                e.currentTarget.style.boxShadow = "0 0 16px #FF2D78, 0 0 32px rgba(255,45,120,0.5), inset 0 0 14px rgba(255,45,120,0.15)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 16px #FF2D78, 0 0 32px rgba(255,45,120,0.5), inset 0 0 14px rgba(255,45,120,0.15)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.boxShadow = "0 0 8px #FF2D78, 0 0 16px rgba(255,45,120,0.25), inset 0 0 8px rgba(255,45,120,0.08)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 8px #FF2D78, 0 0 16px rgba(255,45,120,0.25), inset 0 0 8px rgba(255,45,120,0.08)";
               }}
             >
               [ VIEW MY WORK ]
             </a>
             <a
-              href="/resume.pdf"
+              href={socials.find((item) => item.platform === "resume")?.url}
               className="px-7 py-3 font-pixel text-xs uppercase tracking-wider transition-all duration-300 border-2"
               style={{
                 color: "#00FFFF",
                 borderColor: "#00FFFF",
-                boxShadow: "0 0 8px #00FFFF, 0 0 16px rgba(0,255,255,0.25), inset 0 0 8px rgba(0,255,255,0.08)",
+                boxShadow:
+                  "0 0 8px #00FFFF, 0 0 16px rgba(0,255,255,0.25), inset 0 0 8px rgba(0,255,255,0.08)",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "rgba(0,255,255,0.08)";
-                e.currentTarget.style.boxShadow = "0 0 16px #00FFFF, 0 0 32px rgba(0,255,255,0.5), inset 0 0 14px rgba(0,255,255,0.1)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 16px #00FFFF, 0 0 32px rgba(0,255,255,0.5), inset 0 0 14px rgba(0,255,255,0.1)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.boxShadow = "0 0 8px #00FFFF, 0 0 16px rgba(0,255,255,0.25), inset 0 0 8px rgba(0,255,255,0.08)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 8px #00FFFF, 0 0 16px rgba(0,255,255,0.25), inset 0 0 8px rgba(0,255,255,0.08)";
               }}
             >
               [ DOWNLOAD CV ]
@@ -207,11 +229,13 @@ export function Hero() {
                   onMouseEnter={(e) => {
                     e.currentTarget.style.color = "#FF2D78";
                     e.currentTarget.style.borderColor = "#FF2D78";
-                    e.currentTarget.style.boxShadow = "0 0 8px #FF2D78, 0 0 16px rgba(255,45,120,0.3)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 8px #FF2D78, 0 0 16px rgba(255,45,120,0.3)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.color = "var(--text-muted)";
-                    e.currentTarget.style.borderColor = "rgba(0, 255, 255, 0.2)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(0, 255, 255, 0.2)";
                     e.currentTarget.style.boxShadow = "none";
                   }}
                   aria-label={s.label}
@@ -234,7 +258,8 @@ export function Hero() {
           <div
             className="absolute -inset-3 -z-10"
             style={{
-              background: "radial-gradient(ellipse at center, rgba(255,45,120,0.2) 0%, transparent 70%)",
+              background:
+                "radial-gradient(ellipse at center, rgba(255,45,120,0.2) 0%, transparent 70%)",
             }}
           />
 
@@ -242,7 +267,8 @@ export function Hero() {
             className="relative w-52 h-52 sm:w-68 sm:h-68 lg:w-72 lg:h-72"
             style={{
               border: "2px solid #FF2D78",
-              boxShadow: "0 0 18px #FF2D78, 0 0 36px rgba(255,45,120,0.3), inset 0 0 18px rgba(255,45,120,0.08)",
+              boxShadow:
+                "0 0 18px #FF2D78, 0 0 36px rgba(255,45,120,0.3), inset 0 0 18px rgba(255,45,120,0.08)",
             }}
           >
             <Image
@@ -265,16 +291,29 @@ export function Hero() {
             <div
               className="absolute bottom-0 inset-x-0 h-1/4"
               style={{
-                background: "linear-gradient(to top, rgba(255,45,120,0.15), transparent)",
+                background:
+                  "linear-gradient(to top, rgba(255,45,120,0.15), transparent)",
               }}
             />
           </div>
 
           {/* Corner decorators */}
-          <div className="absolute -top-1 -left-1 w-5 h-5 border-t-2 border-l-2" style={{ borderColor: "#00FFFF" }} />
-          <div className="absolute -top-1 -right-1 w-5 h-5 border-t-2 border-r-2" style={{ borderColor: "#00FFFF" }} />
-          <div className="absolute -bottom-1 -left-1 w-5 h-5 border-b-2 border-l-2" style={{ borderColor: "#00FFFF" }} />
-          <div className="absolute -bottom-1 -right-1 w-5 h-5 border-b-2 border-r-2" style={{ borderColor: "#00FFFF" }} />
+          <div
+            className="absolute -top-1 -left-1 w-5 h-5 border-t-2 border-l-2"
+            style={{ borderColor: "#00FFFF" }}
+          />
+          <div
+            className="absolute -top-1 -right-1 w-5 h-5 border-t-2 border-r-2"
+            style={{ borderColor: "#00FFFF" }}
+          />
+          <div
+            className="absolute -bottom-1 -left-1 w-5 h-5 border-b-2 border-l-2"
+            style={{ borderColor: "#00FFFF" }}
+          />
+          <div
+            className="absolute -bottom-1 -right-1 w-5 h-5 border-b-2 border-r-2"
+            style={{ borderColor: "#00FFFF" }}
+          />
 
           {/* Label below photo */}
           <div
@@ -293,7 +332,12 @@ export function Hero() {
         transition={{ delay: 1.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="font-pixel text-xs" style={{ color: "rgba(0,255,255,0.4)" }}>SCROLL</span>
+        <span
+          className="font-pixel text-xs"
+          style={{ color: "rgba(0,255,255,0.4)" }}
+        >
+          SCROLL
+        </span>
         <ArrowDown
           size={14}
           style={{
@@ -306,5 +350,3 @@ export function Hero() {
     </section>
   );
 }
-
-

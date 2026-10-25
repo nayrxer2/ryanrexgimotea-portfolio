@@ -63,16 +63,16 @@ export const profile: Profile = {
   title: "Frontend Developer",
 
   // TODO: A short, punchy tagline shown beneath your name in the Hero
-  tagline: "I build fast, accessible, and beautiful web experiences.",
+  tagline: "Code. Style. Deploy. Debug. Repeat.",
 
   // TODO: 2–3 sentence bio shown in the About section
-  bio: "I'm a frontend developer passionate about creating clean and performant user interfaces. I love turning ideas into polished digital experiences that users actually enjoy. When I'm not coding, you'll find me exploring new design trends or contributing to open source.",
+  bio: "I write TypeScript, weaponize Tailwind, and deploy Next.js applications. My hobbies include making pixels behave, murdering bugs, and asking myself why the CSS worked yesterday.",
 
   // TODO: Your city / country (e.g. "Manila, Philippines")
-  location: "Your City, Country",
+  location: "Iloilo City, Philippines",
 
   // TODO: Your public contact email
-  email: "hello@youremail.com",
+  email: "ryangimotea9@gmail.com",
 
   // TODO: Path to your avatar/photo — place the file in the public/ folder
   //       and reference it as "/avatar.jpg" (or .png, .webp, etc.)
@@ -88,20 +88,14 @@ export const socials: Social[] = [
   {
     platform: "github",
     // TODO: Replace with your GitHub profile URL
-    url: "https://github.com/yourusername",
+    url: "https://github.com/nayrxer2",
     label: "GitHub",
   },
   {
     platform: "linkedin",
     // TODO: Replace with your LinkedIn profile URL
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://linkedin.com/in/ryan-gimotea",
     label: "LinkedIn",
-  },
-  {
-    platform: "instagram",
-    // TODO: Replace with your Instagram profile URL
-    url: "https://instagram.com/yourusername",
-    label: "Instagram",
   },
   {
     platform: "blog",
@@ -113,7 +107,7 @@ export const socials: Social[] = [
   {
     platform: "resume",
     // TODO: Place your resume PDF at public/resume.pdf — this link will work automatically
-    url: "/resume.pdf",
+    url: "https://github.com/nayrxer2/CV/blob/main/RYAN%20CV.pdf",
     label: "Resume",
   },
 ];
@@ -230,13 +224,13 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     // TODO: Company name
-    company: "Company Name",
+    company: "Cogitate",
 
     // TODO: Your role/title at this company
     role: "Frontend Developer",
 
     // TODO: Employment period (e.g. "Jan 2023 – Present")
-    period: "Jan 2023 – Present",
+    period: "Dec 2021 – Jan 2026",
 
     // TODO: 2–3 sentences about your responsibilities and key achievements
     description:
@@ -246,12 +240,12 @@ export const experiences: Experience[] = [
     tech: ["React", "TypeScript", "Next.js"],
   },
   {
-    company: "Previous Company",
-    role: "Junior Frontend Developer",
-    period: "Jun 2021 – Dec 2022",
+    company: "Waffle Time Inc.",
+    role: "Software Developer",
+    period: "May 2019 – Dec 2021",
     description:
       "Describe your responsibilities, key achievements, and impact in this role. Mention specific projects and measurable outcomes where possible.",
-    tech: ["HTML", "CSS", "JavaScript", "Vue.js"],
+    tech: ["MySql", "VB.Net", "CSS", "JavaScript"],
   },
   // TODO: Add more experience entries as needed
 ];
@@ -263,16 +257,16 @@ export const experiences: Experience[] = [
 export const education: Education[] = [
   {
     // TODO: School or university name
-    school: "University Name",
+    school: "Central Philippine University",
 
     // TODO: Degree type (e.g. "Bachelor of Science", "Associate Degree")
     degree: "Bachelor of Science",
 
     // TODO: Field of study
-    field: "Computer Science",
+    field: "Information Technology",
 
     // TODO: Attendance period (e.g. "2017 – 2021")
-    period: "2017 – 2021",
+    period: "2012 – 2018",
 
     // TODO: Optional — short description or notable achievements (remove if not needed)
     description:
