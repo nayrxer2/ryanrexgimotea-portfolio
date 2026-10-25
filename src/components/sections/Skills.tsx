@@ -5,10 +5,34 @@ import { Section, SectionHeading } from "@/components/Section";
 import { skillGroups } from "@/data/portfolio";
 
 const GROUP_NEON = [
-  { border: "rgba(255,45,120,0.4)",  chipColor: "#FF2D78",  chipBg: "rgba(255,45,120,0.1)",  label: "PINK",   shadow: "0 0 6px #FF2D78"  },
-  { border: "rgba(0,255,255,0.4)",   chipColor: "#00FFFF",  chipBg: "rgba(0,255,255,0.08)",  label: "CYAN",   shadow: "0 0 6px #00FFFF"  },
-  { border: "rgba(191,0,255,0.4)",   chipColor: "#BF00FF",  chipBg: "rgba(191,0,255,0.1)",   label: "PURPLE", shadow: "0 0 6px #BF00FF"  },
-  { border: "rgba(57,255,20,0.4)",   chipColor: "#39FF14",  chipBg: "rgba(57,255,20,0.08)",  label: "GREEN",  shadow: "0 0 6px #39FF14"  },
+  {
+    border: "rgba(255,45,120,0.4)",
+    chipColor: "#FF2D78",
+    chipBg: "rgba(255,45,120,0.1)",
+    label: "PINK",
+    shadow: "0 0 6px #FF2D78",
+  },
+  {
+    border: "rgba(0,255,255,0.4)",
+    chipColor: "#00FFFF",
+    chipBg: "rgba(0,255,255,0.08)",
+    label: "CYAN",
+    shadow: "0 0 6px #00FFFF",
+  },
+  {
+    border: "rgba(191,0,255,0.4)",
+    chipColor: "#BF00FF",
+    chipBg: "rgba(191,0,255,0.1)",
+    label: "PURPLE",
+    shadow: "0 0 6px #BF00FF",
+  },
+  {
+    border: "rgba(57,255,20,0.4)",
+    chipColor: "#39FF14",
+    chipBg: "rgba(57,255,20,0.08)",
+    label: "GREEN",
+    shadow: "0 0 6px #39FF14",
+  },
 ] as const;
 
 export function Skills() {
@@ -44,12 +68,21 @@ export function Skills() {
                 {/* Header bar */}
                 <div
                   className="px-4 py-2 border-b flex items-center gap-2"
-                  style={{ borderColor: neon.border, backgroundColor: `${neon.chipBg}` }}
+                  style={{
+                    borderColor: neon.border,
+                    backgroundColor: `${neon.chipBg}`,
+                  }}
                 >
-                  <span className="font-pixel text-xs" style={{ color: neon.chipColor, textShadow: neon.shadow }}>
+                  <span
+                    className="font-pixel text-xs"
+                    style={{ color: neon.chipColor, textShadow: neon.shadow }}
+                  >
                     &gt;
                   </span>
-                  <h3 className="font-display font-bold text-xs uppercase tracking-widest" style={{ color: neon.chipColor }}>
+                  <h3
+                    className="font-display font-bold text-xs uppercase tracking-widest"
+                    style={{ color: neon.chipColor }}
+                  >
                     {group.category}
                   </h3>
                 </div>
@@ -61,7 +94,10 @@ export function Skills() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.25, delay: gi * 0.08 + si * 0.04 }}
+                      transition={{
+                        duration: 0.25,
+                        delay: gi * 0.08 + si * 0.04,
+                      }}
                       whileHover={{ scale: 1.08 }}
                       className="text-xs font-display px-3 py-1 border cursor-default tracking-wide transition-all duration-200"
                       style={{
@@ -70,10 +106,12 @@ export function Skills() {
                         borderColor: neon.border,
                       }}
                       onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.boxShadow = neon.shadow;
+                        (e.currentTarget as HTMLElement).style.boxShadow =
+                          neon.shadow;
                       }}
                       onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                        (e.currentTarget as HTMLElement).style.boxShadow =
+                          "none";
                       }}
                     >
                       {skill}
@@ -88,6 +126,3 @@ export function Skills() {
     </Section>
   );
 }
-
-
-
