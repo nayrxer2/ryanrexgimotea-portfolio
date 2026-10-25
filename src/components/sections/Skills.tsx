@@ -90,27 +90,4 @@ export function Skills() {
 }
 
 
-// Each group gets a distinct gradient + chip accent color
-const GROUP_STYLES = [
-  {
-    gradient: "linear-gradient(135deg, #245f73, #2d7a93)",
-    chipBg: "rgba(36, 95, 115, 0.12)",
-    chipColor: "#2d7a93",
-  },
-  {
-    gradient: "linear-gradient(135deg, #733e24, #8b5030)",
-    chipBg: "rgba(115, 62, 36, 0.12)",
-    chipColor: "#a06540",
-  },
-  {
-    gradient: "linear-gradient(135deg, #3b7e96, #4d97ad)",
-    chipBg: "rgba(59, 126, 150, 0.12)",
-    chipColor: "#4d97ad",
-  },
-  {
-    gradient: "linear-gradient(135deg, #8b7355, #a67b5b)",
-    chipBg: "rgba(166, 123, 91, 0.15)",
-    chipColor: "#a67b5b",
-  },
-] as const;
 

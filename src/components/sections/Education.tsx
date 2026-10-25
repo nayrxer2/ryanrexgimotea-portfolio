@@ -26,14 +26,17 @@ export function Education() {
               className="border transition-all duration-300 relative overflow-hidden"
               style={{
                 backgroundColor: "var(--bg-card)",
-                borderColor: i % 2 === 0 ? "rgba(0,255,255,0.35)" : "rgba(191,0,255,0.35)",
+                borderColor:
+                  i % 2 === 0 ? "rgba(0,255,255,0.35)" : "rgba(191,0,255,0.35)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = i % 2 === 0 ? "#00FFFF" : "#BF00FF";
+                e.currentTarget.style.borderColor =
+                  i % 2 === 0 ? "#00FFFF" : "#BF00FF";
                 e.currentTarget.style.boxShadow = `0 0 16px ${i % 2 === 0 ? "rgba(0,255,255,0.2)" : "rgba(191,0,255,0.2)"}`;
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = i % 2 === 0 ? "rgba(0,255,255,0.35)" : "rgba(191,0,255,0.35)";
+                e.currentTarget.style.borderColor =
+                  i % 2 === 0 ? "rgba(0,255,255,0.35)" : "rgba(191,0,255,0.35)";
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
@@ -58,7 +61,10 @@ export function Education() {
                     &#9670;
                   </div>
                   <div>
-                    <h3 className="font-display font-bold uppercase tracking-wide text-sm" style={{ color: "var(--text)" }}>
+                    <h3
+                      className="font-display font-bold uppercase tracking-wide text-sm"
+                      style={{ color: "var(--text)" }}
+                    >
                       {edu.degree}
                     </h3>
                     <p
@@ -70,22 +76,37 @@ export function Education() {
                   </div>
                 </div>
 
-                <p className="font-display font-semibold text-sm uppercase tracking-wide mb-1" style={{ color: "var(--text)" }}>
+                <p
+                  className="font-display font-semibold text-sm uppercase tracking-wide mb-1"
+                  style={{ color: "var(--text)" }}
+                >
                   {edu.school}
                 </p>
-                <p className="font-pixel text-xs mb-3" style={{ color: "rgba(200,195,240,0.4)" }}>
-                   {edu.period}
+                <p
+                  className="font-pixel text-xs mb-3"
+                  style={{ color: "rgba(200,195,240,0.4)" }}
+                >
+                  {"// "}
+                  {edu.period}
                 </p>
                 {edu.description && (
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--text-muted)" }}
+                  >
                     {edu.description}
                   </p>
                 )}
               </div>
 
               {/* Corner accents */}
-              <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r"
-                style={{ borderColor: i % 2 === 0 ? "rgba(0,255,255,0.3)" : "rgba(191,0,255,0.3)" }} />
+              <div
+                className="absolute bottom-0 right-0 w-6 h-6 border-b border-r"
+                style={{
+                  borderColor:
+                    i % 2 === 0 ? "rgba(0,255,255,0.3)" : "rgba(191,0,255,0.3)",
+                }}
+              />
             </motion.div>
           ))}
         </div>
@@ -93,5 +114,3 @@ export function Education() {
     </Section>
   );
 }
-
-

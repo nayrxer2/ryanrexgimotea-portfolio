@@ -22,7 +22,8 @@ export function Experience() {
           <div
             className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
             style={{
-              background: "linear-gradient(to bottom, #FF2D78, #BF00FF, #00FFFF, transparent)",
+              background:
+                "linear-gradient(to bottom, #FF2D78, #BF00FF, #00FFFF, transparent)",
               boxShadow: "0 0 6px rgba(0,255,255,0.3)",
             }}
           />
@@ -56,15 +57,22 @@ export function Experience() {
                   className="ml-12 md:ml-0 md:flex-1 border transition-all duration-300 relative overflow-hidden"
                   style={{
                     backgroundColor: "var(--bg-card)",
-                    borderColor: i % 2 === 0 ? "rgba(255,45,120,0.35)" : "rgba(0,255,255,0.35)",
+                    borderColor:
+                      i % 2 === 0
+                        ? "rgba(255,45,120,0.35)"
+                        : "rgba(0,255,255,0.35)",
                     boxShadow: `0 0 8px ${i % 2 === 0 ? "rgba(255,45,120,0.1)" : "rgba(0,255,255,0.1)"}`,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = i % 2 === 0 ? "#FF2D78" : "#00FFFF";
+                    e.currentTarget.style.borderColor =
+                      i % 2 === 0 ? "#FF2D78" : "#00FFFF";
                     e.currentTarget.style.boxShadow = `0 0 16px ${i % 2 === 0 ? "rgba(255,45,120,0.25)" : "rgba(0,255,255,0.25)"}`;
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = i % 2 === 0 ? "rgba(255,45,120,0.35)" : "rgba(0,255,255,0.35)";
+                    e.currentTarget.style.borderColor =
+                      i % 2 === 0
+                        ? "rgba(255,45,120,0.35)"
+                        : "rgba(0,255,255,0.35)";
                     e.currentTarget.style.boxShadow = `0 0 8px ${i % 2 === 0 ? "rgba(255,45,120,0.1)" : "rgba(0,255,255,0.1)"}`;
                   }}
                 >
@@ -89,7 +97,10 @@ export function Experience() {
                         {String(i + 1).padStart(2, "0")}
                       </div>
                       <div>
-                        <h3 className="font-display font-bold uppercase tracking-wide text-sm" style={{ color: "var(--text)" }}>
+                        <h3
+                          className="font-display font-bold uppercase tracking-wide text-sm"
+                          style={{ color: "var(--text)" }}
+                        >
                           {exp.role}
                         </h3>
                         <p
@@ -101,10 +112,17 @@ export function Experience() {
                       </div>
                     </div>
 
-                    <p className="font-pixel text-xs mb-3" style={{ color: "rgba(200,195,240,0.4)" }}>
+                    <p
+                      className="font-pixel text-xs mb-3"
+                      style={{ color: "rgba(200,195,240,0.4)" }}
+                    >
+                      {"// "}
                       {exp.period}
                     </p>
-                    <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-muted)" }}>
+                    <p
+                      className="text-sm leading-relaxed mb-3"
+                      style={{ color: "var(--text-muted)" }}
+                    >
                       {exp.description}
                     </p>
 
@@ -135,5 +153,3 @@ export function Experience() {
     </Section>
   );
 }
-
-
