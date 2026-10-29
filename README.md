@@ -16,6 +16,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Contact form setup
+
+Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
+to your Web3Forms access key. Configure the same variable in the environment
+used to build the static site for deployment.
+
+Web3Forms access keys are used in browser submissions. Because this project
+uses static export, a `NEXT_PUBLIC_` variable is embedded in the exported
+JavaScript and is visible to visitors; do not put private credentials in it.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
