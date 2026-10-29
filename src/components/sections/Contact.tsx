@@ -1,7 +1,8 @@
 "use client";
 
 import { Section, SectionHeading } from "@/components/Section";
-import { FORMSPREE_FORM_ID, profile } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
+import { submitContactForm } from "@/lib/web3forms";
 import { motion } from "framer-motion";
 import { AlertCircle, CheckCircle, Mail, MapPin, Send } from "lucide-react";
 import { useState } from "react";
@@ -31,30 +32,17 @@ export function Contact() {
 
     const form = e.currentTarget;
 
-    if (FORMSPREE_FORM_ID === "YOUR_FORMSPREE_FORM_ID") {
-      setState("error");
-      setErrorMsg(
-        "Contact form not configured yet. Update FORMSPREE_FORM_ID in src/data/portfolio.ts to enable it.",
-      );
-      return;
-    }
-
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
-      if (res.ok) {
-        setState("success");
-        form.reset();
-      } else {
-        throw new Error("Submission failed");
-      }
-    } catch {
+      await submitContactForm(new FormData(form));
+      setState("success");
+      form.reset();
+    } catch (error) {
       setState("error");
       setErrorMsg(
-        "Transmission failed. Please try again or contact me directly.",
+        error instanceof Error &&
+          error.message.startsWith("Contact form is not configured")
+          ? error.message
+          : "Transmission failed. Please try again or contact me directly.",
       );
     }
   }

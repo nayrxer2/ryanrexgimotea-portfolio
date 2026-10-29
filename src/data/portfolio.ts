@@ -228,10 +228,7 @@ export const education: Education[] = [
 // ─── 7. CONTACT FORM ─────────────────────────────────────────────────────────
 // ─────────────────────────────────────────────────────────────────────────────
 
-// TODO: Set up a free Formspree account at https://formspree.io
-//       1. Create a new form → copy the form ID (e.g. "xabcdefg")
-//       2. Replace "YOUR_FORMSPREE_FORM_ID" below with your actual ID
-export const FORMSPREE_FORM_ID = "YOUR_FORMSPREE_FORM_ID";
+// Contact form credentials are configured with NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ─── 8. SEO / OPEN GRAPH ─────────────────────────────────────────────────────
