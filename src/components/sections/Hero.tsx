@@ -201,6 +201,7 @@ export function Hero() {
                 e.currentTarget.style.boxShadow =
                   "0 0 8px #00FFFF, 0 0 16px rgba(0,255,255,0.25), inset 0 0 8px rgba(0,255,255,0.08)";
               }}
+              download="ryangimotea-CV.pdf"
             >
               [ DOWNLOAD CV ]
             </a>
