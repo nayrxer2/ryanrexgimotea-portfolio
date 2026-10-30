@@ -88,7 +88,7 @@ export const socials: Social[] = [
   },
   {
     platform: "resume",
-    url: "https://github.com/nayrxer2/CV/blob/main/RYAN%20CV.pdf",
+    url: "./cv/ryan-gimotea-CV.pdf",
     label: "Resume",
   },
 ];
@@ -137,7 +137,7 @@ export const projects: Project[] = [
   {
     title: "Project One",
     description:
-      "A brief description of what this project does and what problem it solves. Replace this with your actual project description.",
+      "project description.",
 
     tech: ["React", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://project-one.vercel.app",
@@ -148,7 +148,7 @@ export const projects: Project[] = [
   {
     title: "Project Two",
     description:
-      "A brief description of what this project does and what problem it solves. Replace this with your actual project description.",
+      "project description.",
     tech: ["Next.js", "Node.js", "PostgreSQL"],
     liveUrl: "https://project-two.vercel.app",
     repoUrl: "https://github.com/yourusername/project-two",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
   {
     title: "Project Three",
     description:
-      "A brief description of what this project does and what problem it solves. Replace this with your actual project description.",
+      "project description.",
     tech: ["Vue.js", "Firebase", "Tailwind CSS"],
     liveUrl: "https://project-three.vercel.app",
     repoUrl: "https://github.com/yourusername/project-three",

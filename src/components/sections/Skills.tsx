@@ -48,7 +48,7 @@ export function Skills() {
           color="purple"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group, gi) => {
             const neon = GROUP_NEON[gi % GROUP_NEON.length];
             return (
